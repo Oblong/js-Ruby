@@ -2,7 +2,7 @@
 # Copyright(c) 2011 Oblong <chris@oblong.com>
 # MIT Licensed
 module JS
-  def self.setTimeout(interval, &block)
+  def setTimeout(interval, &block)
     startTime = Time.new.to_f
 
     Thread.new {
@@ -19,7 +19,7 @@ module JS
     }
   end
 
-  def self.setInterval(interval, &block)
+  def setInterval(interval, &block)
     startTime = Time.new.to_f
     times = 0
 
@@ -50,11 +50,12 @@ module JS
     }
   end
 
-  def self.clearTimeout threadId
+  def clearTimeout threadId
     Thread.kill threadId
   end
 
-  def self.clearInterval threadId
+  def clearInterval threadId
     Thread.kill threadId
   end
+
 end
