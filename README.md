@@ -12,9 +12,9 @@ This simple library emulates the following core JS calls in Ruby, But has some s
     </tr><tr>
       <td> [handle] setInterval ( block, interval ) </td><td> [handle] JS::setInterval ( interval, block ) </td>
     </tr><tr>
-      <td> clearTimeout ( handle ) </td><td> clearTimeout ( handle ) </td>
+      <td> clearTimeout ( handle ) </td><td> JS::clearTimeout ( handle ) </td>
     </tr><tr>
-      <td> clearInterval ( handle ) </td><td> clearInterval ( handle ) </td>
+      <td> clearInterval ( handle ) </td><td> JS::clearInterval ( handle ) </td>
     </tr>
   </tbody>
 </table>
