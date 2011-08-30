@@ -15,9 +15,13 @@ This simple library emulates the following core JS calls in Ruby, But has some s
       <td> clearTimeout ( handle ) </td><td> JS::clearTimeout ( handle ) </td>
     </tr><tr>
       <td> clearInterval ( handle ) </td><td> JS::clearInterval ( handle ) </td>
+    </tr><tr>
+      <td> [object] {} </td><td> [object] JS::object ( hash ) </td>
     </tr>
   </tbody>
 </table>
+
+See test.rb for crude usage examples.
 
 ## License
 MIT

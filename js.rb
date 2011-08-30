@@ -58,4 +58,16 @@ module JS
     Thread.kill threadId
   end
 
+  # @http://stackoverflow.com/questions/7237578/js-style-object-referencing-in-ruby
+  class JSObject < Hash
+    def method_missing(symbol, opts = nil)
+      string = symbol.to_s
+      self[string[0..-2].to_sym] = opts if string[-1..-1] == '=' and opts
+      self[symbol]
+    end
+  end
+
+  def object other_hash
+    JSObject.new.merge! other_hash
+  end
 end
