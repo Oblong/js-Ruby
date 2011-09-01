@@ -1,18 +1,19 @@
 require 'js'
 include JS
 
-obj = {
+js = {
   :key1 => 'value1',
-  :key2 => 'value2'
+  :key2 => {
+    :key1 => 'value'
+  }
 }
 
-js = hash obj
-
 puts js.key1
-js.key2 = 'newvalue'
-puts js.key2
 js.key3 = 'newkey'
 puts js.key3
+puts js.key2.key1
+js.key2 = 'newvalue'
+puts js.key2
 
 id = setInterval(1000) do | x |
   puts 'interval', x
